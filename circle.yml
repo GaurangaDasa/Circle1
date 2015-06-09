@@ -1,7 +1,7 @@
 database:
   override:
     - mysql -u ubuntu -e "source database/temp.sql"
-    - mysql -u ubuntu -e "select * from Persons;"
+    - mysql -u ubuntu -e "select * from mybase.Persons;"
 test:
   override:
     - mvn clean verify
