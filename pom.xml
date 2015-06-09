@@ -82,44 +82,42 @@
             </executions>
         </plugin>
 		
-		<!--  <plugin>
-            <groupId>org.jfrog.buildinfo</groupId>
-            <artifactId>artifactory-maven-plugin</artifactId>
-            <version>2.2.2</version>
-            <inherited>false</inherited>
-            <executions>
-                <execution>
-                    <id>build-info</id>
-                    <goals>
-                        <goal>publish</goal>
-                    </goals>
-					<phase>validate</phase>
-                    <configuration>
-                         <deployProperties>
-                            <gradle>awesome</gradle>
-                            <review.team>qa</review.team>
-                        </deployProperties> 
-                        <publisher>
-                            <contextUrl>https://oss.jfrog.org</contextUrl>
-                            <username>deployer</username>
-                            <password>{DESede}...</password>
-                            <repoKey>libs-releases-local</repoKey>
-                            <snapshotRepoKey>libs-snapshots-local</snapshotRepoKey>
-                        </publisher> 
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>  -->
+		<plugin>
+				<groupId>com.atlassian.maven.plugins</groupId>
+				<artifactId>maven-clover2-plugin</artifactId>
+				<version>3.1.12</version>
+				<configuration>
+					<encoding>utf-8</encoding>
+					<license><![CDATA[PpOnrjlpFewlfppRpEgUBpPbqOQJCUXjxddDPtIMwGJDGG 
+				mi2KYwlOOX3WDaavVOPbBQRA2Ktgp87Kv<XxIdM4P76DSK QMRrXSqOOqMmOmnNoNrtxoMpPOnooOnRRpvvWUWVTVwsOn 
+				mnmUUnpttrorsmmmmmUUnpttrorsmmmmmUU3vYXdbUUn]]>
+					</license>
+					<targetPercentage>30%</targetPercentage>
+					<jdk>1.7</jdk>
+					<generatePdf>true</generatePdf>
+					<generateXml>true</generateXml>
+					<generateHtml>true</generateHtml>
+					<generateHistorical>true</generateHistorical>
+				</configuration>
+				<executions>
+					<execution>
+						<id>main</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>instrument</goal>
+							<goal>aggregate</goal>
+							<goal>check</goal>
+							<goal>clover</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		
+		
 		
     </plugins>
   </build>
   
-	<!-- <distributionManagement>
-    <snapshotRepository>
-        <id>gauranga</id>
-        <name>gauranga-snapshots</name>
-        <url>http://172.27.59.147:9095/artifactory/libs-snapshot-local</url>
-    </snapshotRepository>
-</distributionManagement> -->
+	
 
 </project>
