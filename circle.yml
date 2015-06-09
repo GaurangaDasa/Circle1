@@ -1,3 +1,6 @@
+database:
+  override:
+    - mysql -u ubuntu -e "show databases;"
 deployment:
   staging:
     branch: master
