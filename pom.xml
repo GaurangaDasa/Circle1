@@ -92,7 +92,7 @@
 				mi2KYwlOOX3WDaavVOPbBQRA2Ktgp87Kv<XxIdM4P76DSK QMRrXSqOOqMmOmnNoNrtxoMpPOnooOnRRpvvWUWVTVwsOn 
 				mnmUUnpttrorsmmmmmUUnpttrorsmmmmmUU3vYXdbUUn]]>
 					</license>
-					<targetPercentage>30%</targetPercentage>
+				<!-- 	<targetPercentage>30%</targetPercentage> -->
 					<jdk>1.7</jdk>
 					<generatePdf>true</generatePdf>
 					<generateXml>true</generateXml>
@@ -106,7 +106,7 @@
 						<goals>
 							<goal>instrument</goal>
 							<goal>aggregate</goal>
-							<goal>check</goal>
+							<!-- <goal>check</goal> -->
 							<goal>clover</goal>
 						</goals>
 					</execution>
