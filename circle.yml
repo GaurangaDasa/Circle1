@@ -1,5 +1,5 @@
 deployment:
   staging:
     branch: master
-    commands:
-      - java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
+    heroku:
+      appname: circleone
