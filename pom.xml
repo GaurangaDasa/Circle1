@@ -61,6 +61,17 @@
         </plugin>
 		
 		<plugin>
+			<groupId>org.eluder.coveralls</groupId>
+			<artifactId>coveralls-maven-plugin</artifactId>
+			<version>3.1.0</version>
+			<configuration>
+				<sourceEncoding>UTF8</sourceEncoding>
+					 <repoToken>z8DTQURjySt4Sgd5K7rj5fiPJYYnhi3IQ</repoToken>
+			</configuration>
+		</plugin>
+
+
+		<plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
             <version>2.3</version>
@@ -82,36 +93,7 @@
             </executions>
         </plugin>
 		
-		<plugin>
-				<groupId>com.atlassian.maven.plugins</groupId>
-				<artifactId>maven-clover2-plugin</artifactId>
-				<version>3.1.12</version>
-				<configuration>
-					<encoding>utf-8</encoding>
-					<license><![CDATA[PpOnrjlpFewlfppRpEgUBpPbqOQJCUXjxddDPtIMwGJDGG 
-				mi2KYwlOOX3WDaavVOPbBQRA2Ktgp87Kv<XxIdM4P76DSK QMRrXSqOOqMmOmnNoNrtxoMpPOnooOnRRpvvWUWVTVwsOn 
-				mnmUUnpttrorsmmmmmUUnpttrorsmmmmmUU3vYXdbUUn]]>
-					</license>
-				<!-- 	<targetPercentage>30%</targetPercentage> -->
-					<jdk>1.7</jdk>
-					<generatePdf>true</generatePdf>
-					<generateXml>true</generateXml>
-					<generateHtml>true</generateHtml>
-					<generateHistorical>true</generateHistorical>
-				</configuration>
-				<executions>
-					<execution>
-						<id>main</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>instrument</goal>
-							<goal>aggregate</goal>
-							<!-- <goal>check</goal> -->
-							<goal>clover</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+
 		
 		
 		
